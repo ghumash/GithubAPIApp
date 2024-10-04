@@ -1,8 +1,8 @@
 import { useDispatch } from 'react-redux'
 import { bindActionCreators } from '@reduxjs/toolkit'
-import { githubActions } from '../store/github/github.slice'
+import { weatherActions } from '../store/weather/weather.slice'
 
-const actions = { ...githubActions }
+const actions = { ...weatherActions }
 
 export const useActions = () => {
   const dispatch = useDispatch()

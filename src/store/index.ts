@@ -1,15 +1,15 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { githubApi } from './github/github.api'
+import { weatherApi } from './weather/weather.api'
 import { setupListeners } from '@reduxjs/toolkit/query'
-import { githubReducer } from './github/github.slice'
+import { weatherReducer } from './weather/weather.slice'
 
 export const store = configureStore({
   reducer: {
-    [githubApi.reducerPath]: githubApi.reducer,
-    github: githubReducer,
+    [weatherApi.reducerPath]: weatherApi.reducer,
+    weather: weatherReducer,
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(githubApi.middleware),
+    getDefaultMiddleware().concat(weatherApi.middleware),
 })
 
 setupListeners(store.dispatch)

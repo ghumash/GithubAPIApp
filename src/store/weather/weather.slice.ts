@@ -2,18 +2,18 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 const LOCAL_STORAGE_FAVOURITE_KEY = 'rfk'
 
-interface GithubState {
+interface WeatherState {
   favourites: string[]
 }
 
-const initialState: GithubState = {
+const initialState: WeatherState = {
   favourites: JSON.parse(
     localStorage.getItem(LOCAL_STORAGE_FAVOURITE_KEY) ?? '[]',
   ),
 }
 
-export const githubSlice = createSlice({
-  name: 'github',
+export const weatherSlice = createSlice({
+  name: 'weather',
   initialState,
   reducers: {
     addFavourite(state, action: PayloadAction<string>) {
@@ -33,4 +33,4 @@ export const githubSlice = createSlice({
   },
 })
 
-export const { actions: githubActions, reducer: githubReducer } = githubSlice
+export const { actions: weatherActions, reducer: weatherReducer } = weatherSlice

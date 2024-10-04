@@ -2,7 +2,7 @@ import { FC, useEffect, useState } from 'react'
 import {
   useLazyGetUserReposQuery,
   useSearchUsersQuery,
-} from '../store/github/github.api'
+} from '../store/weather/weather.api'
 import { useDebounce } from '../hooks/debounce'
 import RepoCard from '../components/RepoCard'
 

@@ -2,7 +2,7 @@ import { FC } from 'react'
 import { useAppSelector } from '../hooks/redux'
 
 const FavouritesPage: FC = () => {
-  const { favourites } = useAppSelector((state) => state.github)
+  const { favourites } = useAppSelector((state) => state.weather)
 
   if (favourites.length === 0) return <p className={'text-center'}>No items.</p>
 

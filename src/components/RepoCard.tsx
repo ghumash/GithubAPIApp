@@ -11,7 +11,7 @@ const RepoCard = (props: Props) => {
   const { repo } = props
 
   const { addFavourite, removeFavourite } = useActions()
-  const { favourites } = useAppSelector((state) => state.github)
+  const { favourites } = useAppSelector((state) => state.weather)
   const [isFav, setIsFav] = useState(favourites.includes(repo.html_url))
 
   const handleAddFavourite = (event: React.MouseEvent<HTMLButtonElement>) => {
